@@ -1,4 +1,4 @@
-name: Run test with gradle
+name: Test with Gradle
 on: [push, pull_request]
 jobs:
   test:
