@@ -1,10 +1,9 @@
 package set
 
 import Watcher
-import org.junit.jupiter.api.Disabled
-import org.junit.jupiter.api.Test
 import java.io.BufferedReader
 import java.io.File
+import kotlin.test.Test
 
 class CompareUF {
 
@@ -86,7 +85,6 @@ class CompareUF {
     }
 
     @Test
-    @Disabled
     fun compare() {
         val file = File("src/test/kotlin/set/mediumUF.txt")
         val reader = file.bufferedReader()

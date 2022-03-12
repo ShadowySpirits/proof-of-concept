@@ -4,13 +4,13 @@ import net.dzikoysk.exposed.upsert.upsert
 import org.jetbrains.exposed.dao.with
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertNull
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
 import orm.exposed.Histories.data
 import orm.exposed.Queries.aoneId
 import java.time.Instant
+import kotlin.test.BeforeTest
+import kotlin.test.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertNull
 
 class ExposedTest {
     init {
@@ -27,7 +27,7 @@ class ExposedTest {
         println()
     }
 
-    @BeforeEach
+    @BeforeTest
     fun setup() {
         println("setup data")
         transaction {

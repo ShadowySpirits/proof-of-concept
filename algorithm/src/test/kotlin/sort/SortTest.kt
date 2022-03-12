@@ -1,9 +1,9 @@
 package sort
 
-import org.junit.jupiter.api.Assertions.assertTrue
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
 import java.util.*
+import kotlin.test.BeforeTest
+import kotlin.test.Test
+import kotlin.test.assertTrue
 
 class SortTest {
     private val init = getRandomArray()
@@ -28,7 +28,7 @@ class SortTest {
         }
     }
 
-    @BeforeEach
+    @BeforeTest
     fun setUp() {
         a = init.copyOf()
         b = a.copyOf()

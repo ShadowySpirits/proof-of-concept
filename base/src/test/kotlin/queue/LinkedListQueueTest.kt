@@ -1,13 +1,11 @@
 package queue
 
-import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
+import kotlin.test.*
 
 class LinkedListQueueTest {
     private lateinit var queue: LinkedListQueue<Int>
 
-    @BeforeEach
+    @BeforeTest
     fun setUp() {
         queue = LinkedListQueue()
     }
@@ -54,7 +52,7 @@ class LinkedListQueueTest {
         for (item in queue) {
             assertEquals(item, i++)
         }
-        assertThrows(NoSuchElementException::class.java) {
+        assertFailsWith<NoSuchElementException> {
             LinkedListQueue<Int>().iterator().next()
         }
     }

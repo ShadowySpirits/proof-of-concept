@@ -1,13 +1,11 @@
 package queue
 
-import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
+import kotlin.test.*
 
 class ResizingArrayDequeTest {
     private lateinit var queue: ResizingArrayDeque<Int>
 
-    @BeforeEach
+    @BeforeTest
     fun setUp() {
         queue = ResizingArrayDeque()
     }
@@ -64,7 +62,7 @@ class ResizingArrayDequeTest {
         for (item in queue) {
             assertEquals(item, i++)
         }
-        assertThrows(NoSuchElementException::class.java) {
+        assertFailsWith<NoSuchElementException> {
             ResizingArrayDeque<Int>().iterator().next()
         }
     }

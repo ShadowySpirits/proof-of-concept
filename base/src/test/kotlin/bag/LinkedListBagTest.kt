@@ -1,13 +1,11 @@
 package bag
 
-import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
+import kotlin.test.*
 
 class LinkedListBagTest {
     private lateinit var stack: LinkedListBag<Int>
 
-    @BeforeEach
+    @BeforeTest
     fun setUp() {
         stack = LinkedListBag()
     }
@@ -42,7 +40,7 @@ class LinkedListBagTest {
         for (item in stack) {
             assertEquals(item, i--)
         }
-        assertThrows(NoSuchElementException::class.java) {
+        assertFailsWith<NoSuchElementException> {
             LinkedListBag<Int>().iterator().next()
         }
     }

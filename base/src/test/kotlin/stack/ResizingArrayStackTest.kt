@@ -1,14 +1,12 @@
 package stack
 
-import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
+import kotlin.test.*
 
 class ResizingArrayStackTest {
 
     private lateinit var stack: ResizingArrayStack<Int>
 
-    @BeforeEach
+    @BeforeTest
     fun setUp() {
         stack = ResizingArrayStack()
     }
@@ -81,7 +79,7 @@ class ResizingArrayStackTest {
         for (item in stack) {
             assertEquals(item, i--)
         }
-        assertThrows(NoSuchElementException::class.java) {
+        assertFailsWith<NoSuchElementException> {
             ResizingArrayStack<Int>().iterator().next()
         }
     }

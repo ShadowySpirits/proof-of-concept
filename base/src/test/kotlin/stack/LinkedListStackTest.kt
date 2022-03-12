@@ -1,13 +1,11 @@
 package stack
 
-import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
+import kotlin.test.*
 
 class LinkedListStackTest {
     private lateinit var stack: LinkedListStack<Int>
 
-    @BeforeEach
+    @BeforeTest
     fun setUp() {
         stack = LinkedListStack()
     }
@@ -62,7 +60,7 @@ class LinkedListStackTest {
         for (item in stack) {
             assertEquals(item, i--)
         }
-        assertThrows(NoSuchElementException::class.java) {
+        assertFailsWith<NoSuchElementException> {
             LinkedListStack<Int>().iterator().next()
         }
     }
