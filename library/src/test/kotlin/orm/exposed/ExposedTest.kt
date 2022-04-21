@@ -1,6 +1,6 @@
 package orm.exposed
 
-import net.dzikoysk.exposed.upsert.upsert
+import com.alibaba.rocketmq.diagnosis.util.upsert.upsert
 import org.jetbrains.exposed.dao.with
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction

@@ -27,6 +27,7 @@ subprojects {
         testImplementation(Kotlin.test)
         testImplementation(Kotlin.test.junit5)
         testImplementation(Testing.Junit.Jupiter)
+        testImplementation("org.awaitility:awaitility-kotlin:_")
     }
 
     sourceSets.main {
