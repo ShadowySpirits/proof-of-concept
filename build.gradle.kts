@@ -11,7 +11,6 @@ allprojects {
     repositories {
         mavenCentral()
         mavenLocal()
-        maven("https://repo.panda-lang.org/releases")
     }
 }
 

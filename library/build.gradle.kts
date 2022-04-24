@@ -7,5 +7,6 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-java-time:_")
     implementation("com.h2database:h2:_")
 
-    implementation("org.apache.rocketmq:rocketmq-client:v4.4.3.2-SNAPSHOT")
+    implementation("org.apache.rocketmq:rocketmq-client:_")
+    implementation("com.aliyun.openservices:ons-client:_")
 }

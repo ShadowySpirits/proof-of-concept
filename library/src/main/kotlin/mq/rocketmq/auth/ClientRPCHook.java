@@ -37,7 +37,6 @@ public class ClientRPCHook implements RPCHook {
     public void doAfterResponse(String remoteAddr, RemotingCommand request, RemotingCommand response) {
     }
 
-    @Override
     public void doAfterRpcFailure(String remoteAddr, RemotingCommand request, Boolean remoteTimeout) {
     }
 

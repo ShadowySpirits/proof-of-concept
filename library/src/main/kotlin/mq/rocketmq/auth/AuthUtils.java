@@ -18,7 +18,7 @@ public final class AuthUtils {
                 }
             }
             byte[] array = null;
-            ByteBuffer body = request.getBody();
+            ByteBuffer body = ByteBuffer.wrap(request.getBody());
             if (null != body) {
                 array = body.array();
             }
