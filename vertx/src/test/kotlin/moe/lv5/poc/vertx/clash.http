@@ -1,0 +1,7 @@
+GET {{host}}/clash/sttlink
+Accept: application/json
+
+###
+
+GET {{host}}/clash/compose
+Accept: application/json

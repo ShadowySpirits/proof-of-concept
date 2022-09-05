@@ -4,4 +4,4 @@ plugins {
     id("de.fayard.refreshVersions") version "0.40.1"
 }
 
-include("base", "algorithm", "library")
+include("base", "algorithm", "library", "vertx")

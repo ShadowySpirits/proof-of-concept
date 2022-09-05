@@ -1,0 +1,62 @@
+{
+  "type": "record",
+  "name": "avroToParquet",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "topic",
+      "type": "string"
+    },
+    {
+      "name": "queueId",
+      "type": "int"
+    },
+    {
+      "name": "offset",
+      "type": "long"
+    },
+    {
+      "name": "size",
+      "type": "int"
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "bornHost",
+      "type": "string"
+    },
+    {
+      "name": "storeHost",
+      "type": "string"
+    },
+    {
+      "name": "tag",
+      "type": {
+        "type": "array",
+        "items": "string"
+      }
+    },
+    {
+      "name": "key",
+      "type": {
+        "type": "array",
+        "items": "string"
+      }
+    },
+    {
+      "name": "property",
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    }
+  ]
+}
