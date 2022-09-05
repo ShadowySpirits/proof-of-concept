@@ -29,4 +29,7 @@ dependencies {
     implementation("org.duckdb:duckdb_jdbc:_")
 
     testImplementation("io.github.serpro69:kotlin-faker:_")
+
+    implementation("com.github.kotlin-telegram-bot:kotlin-telegram-bot:_")
+    implementation("mysql:mysql-connector-java:_")
 }
